@@ -1,0 +1,27 @@
+footer {
+	text-align: center;
+	color: #fff;
+	position: relative;
+	margin-top: 44px;
+	padding: 96px 0 60px;
+	overflow: hidden;
+	background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
+	font-size: .9rem;
+	.icon {
+		color: #fff;
+		font-size: 1.7em;
+	}
+}
+
+#navbar-block--footer {
+  display: flex;
+  justify-content: center;
+	width: 100%;
+  .menu {
+		padding: 0;
+    .menu-link {
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}

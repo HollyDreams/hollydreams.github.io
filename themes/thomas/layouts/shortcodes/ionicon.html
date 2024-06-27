@@ -1,0 +1,41 @@
+{{ $icon := "logo-ionic"}}
+{{ $width := "24"}}
+{{ $height := "24" }}
+{{ $color := "currentColor" }}
+{{ if .IsNamedParams }}
+    {{ if .Get "icon" }}
+        {{ $icon = (.Get "icon") }}
+    {{ end }}
+    {{ if .Get "width" }}
+        {{ $width = (.Get "width") }}
+    {{ end }}
+    {{ if .Get "height" }}
+        {{ $height = (.Get "height") }}
+    {{ end }}
+    {{ if .Get "color" }}
+        {{ $color = (.Get "color") }}
+    {{ end }}
+{{ else }}
+    {{ if .Get 0 }}
+        {{ $icon = (.Get 0) }}
+    {{ end }}
+    {{ if .Get 1 }}
+        {{ $width = (.Get 1) }}
+    {{ end }}
+    {{ if .Get 2 }}
+        {{ $height = (.Get 2) }}
+    {{ end }}
+    {{ if .Get 3 }}
+        {{ $color = (.Get 3) }}
+    {{ end }}
+{{ end }}
+{{ $iconRes := resources.Get (printf "/svg/ionicons/%s.svg" $icon) }}
+{{ $svg := ($iconRes.Content) }}
+{{ $svg := (replaceRE `^.*?>(.*?)<\/svg>$` "$1" $svg) }}
+{{ (printf `<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    width="%s"
+    height="%s"
+    fill="%s"
+  >%s</svg>` $width $height $color $svg) | safeHTML }}

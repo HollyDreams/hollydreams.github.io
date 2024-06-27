@@ -1,0 +1,42 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Thomas Rinaldi'
+theme = 'thomas'
+    
+[module]
+	[[module.mounts]]
+		source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+		target = "assets/js/bootstrap.bundle.min.js"
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 20
+
+[[menus.main]]
+name = 'Works'
+pageRef = '/works'
+weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  [params.categoryDisplayNames]
+    "books-and-stories" = "Books and Stories"
+    "translations" = "Translations"
+    "video-games" = "Video Games"

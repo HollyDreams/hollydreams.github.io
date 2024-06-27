@@ -1,0 +1,83 @@
+{{ define "main" }}
+<div class="container" id="page-list">
+	<!-- <h1 class="page-heading page-heading-title">{{ .Title }}</h1> -->
+	<div class="page-heading">
+		<h1 class="page-heading-title">{{ .Title }}</h1>
+		<p class="page-heading-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore!</p>
+	</div>
+<!-- 
+	{{ .Content }} -->
+
+	<!-- Books and stories -->
+	<section class="latest-works-list row">
+		<h2>Books and stories</h2>
+		{{ $v1 := where .Site.RegularPages "Type" "works" }} {{ $v2 := where
+		.Site.RegularPages "Params.category" "Books and stories" }} {{ $filtered :=
+		$v1 | intersect $v2 }} {{ range $filtered }}
+		<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+			<a href="{{ .Permalink }}">
+				<div class="card-content">
+					<div class="card-image">
+						<img src="{{ .Params.image }}" alt="" />
+					</div>
+					<div class="card-info">
+						<div class="card-title">{{ .Title }}</div>
+						<div class="card-subtitle">{{ .Params.category }}</div>
+					</div>
+				</div></a
+			>
+		</div>
+		{{end}}
+	</section>
+
+	<!-- Translations -->
+	<section class="latest-works-list row">
+		<h2>Translations</h2>
+		{{ $v1 := where .Site.RegularPages "Type" "works" }} {{ $v2 := where
+		.Site.RegularPages "Params.category" "Translations" }} {{ $filtered := $v1 |
+		intersect $v2 }} {{ range $filtered }}
+		<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+			<a href="{{ .Permalink }}">
+				<div class="card-content">
+					<div class="card-image">
+						<img src="{{ .Params.image }}" alt="" />
+					</div>
+					<div class="card-info">
+						<div class="card-title">{{ .Title }}</div>
+						<div class="card-subtitle">{{ .Params.category }}</div>
+					</div>
+				</div></a
+			>
+		</div>
+		{{end}}
+	</section>
+
+	<!-- Video Games -->
+	<section class="latest-works-list row">
+		<h2>Video Games</h2>
+		{{ $v1 := where .Site.RegularPages "Type" "works" }} {{ $v2 := where
+		.Site.RegularPages "Params.category" "Video Games" }} {{ $filtered := $v1 |
+		intersect $v2 }} {{ range $filtered }}
+		<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+			<a href="{{ .Permalink }}">
+				<div class="card-content">
+					<div class="card-image">
+						<img src="{{ .Params.image }}" alt="" />
+					</div>
+					<div class="card-info">
+						<div class="card-title">{{ .Title }}</div>
+						<div class="card-subtitle">{{ .Params.category }}</div>
+					</div>
+				</div></a
+			>
+		</div>
+		{{end}}
+	</section>
+</div>
+
+<!-- 
+  {{ range .Pages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }} -->
+{{ end }}

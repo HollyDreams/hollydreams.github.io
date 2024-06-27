@@ -1,0 +1,89 @@
+{{ define "main" }} {{ .Content }}
+
+<!-- HERO -->
+<div class="container">
+	<section class="row" id="hero">
+		<div class="col" id="hero-text">
+			<div>
+				<h1 id="hero-title">Hi there, I am <br />Thomas Rinaldi</h1>
+				<p id="hero-description">
+					A <strong>Narrative Designer</strong> and a <strong>Writer</strong>
+					<br />
+					And this is my portfolio
+				</p>
+
+				<a href="#contact" class="btn btn-primary me-2 mb-3">Get in touch</a>
+				<a class="btn btn-secondary btn-icon mb-3" href="#latest-works">
+					<ion-icon
+						class="me-2 icon"
+						name="arrow-down-circle-outline"
+					></ion-icon>
+					See my works
+				</a>
+			</div>
+		</div>
+		<div class="col" id="hero-image">
+			<div class="img-wrapper">
+				<img
+					loading="lazy"
+					src="./images/self.jpeg"
+					alt="Thomas Rinaldi"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- LATEST WORKS -->
+	<section class="row" id="latest-works">
+		<div class="latest-works-title">
+			<h2 class="section-title">Latest works</h2>
+			<a href="/works" class="btn-icon"
+				>View all
+				<ion-icon class="ms-2 icon" name="arrow-forward-outline"></ion-icon>
+			</a>
+		</div>
+		
+		<div class="latest-works-list row">
+			{{ range ( where .Site.RegularPages "Type" "works" | first 3 ) }}
+				{{- $dirSegments := split .File.Dir "/" -}}
+				{{- $category := index $dirSegments (sub (len $dirSegments) 3) -}}
+				{{- $displayName := index $.Site.Params.categoryDisplayNames $category -}}
+				<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+					<a href="{{ .Permalink }}">
+						<div class="card-content">
+							<div class="card-image">
+								<img src="{{ .Params.image }}" alt="" />
+							</div>
+							<div class="card-info">
+								<div class="card-title">{{ .Title }}</div>
+								<div class="card-subtitle">{{ $displayName }}</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			{{ end }}
+		</div>
+		
+
+		<!-- 
+		{{ range site.RegularPages }}
+		<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+		{{ .Summary }} {{ end }} -->
+	</section>
+
+	<!-- CONTACT -->
+	<section class="row" id="contact">
+		<h2 class="title">Get in touch</h2>
+		<form action="">
+			<input type="text" placeholder="Your name" /><input
+				type="text"
+				placeholder="Your email address"
+			/>
+			<textarea rows="9" placeholder="Your message"></textarea>
+			<div class="form-button">
+				<button type="submit" class="btn btn-primary">Send</button>
+			</div>
+		</form>
+	</section>
+</div>
+{{ end }}

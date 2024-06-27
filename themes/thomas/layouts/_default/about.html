@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div id="page-about" class="container page-single">
+	<div class="row">
+		<div class="col">
+			<h1 class="page-heading-title">{{ .Title }}</h1>
+
+			<div class="container">
+				<div class="row">
+					<div id="bio-img" class="col">
+						<img src="{{ .Params.bioImage }}" alt="Thomas Rinaldi">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col page">
+						{{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags"
+						"page" .) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}

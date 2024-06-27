@@ -1,0 +1,33 @@
+#hero {
+	padding: 96px 0;
+}
+#hero-text {
+	display: flex;
+	align-items: center;
+	#hero-title {
+		margin-bottom: 20px;
+		font-size: 44px;
+		font-weight: 900;
+		@media screen and (min-width: 992px) {
+			font-size: 58px;
+		}
+	}
+	#hero-description {
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
+}
+#hero-image {
+	.img-wrapper {
+		overflow: hidden;
+		max-height: 550px;
+		max-width: 400px;
+		border-radius: 50px;
+		@media screen and (min-width: 768px) {
+			margin: 0 auto;
+		}
+	}
+	img {
+		width: 100%;
+	}
+}

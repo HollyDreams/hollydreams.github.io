@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html
+	lang="{{ or site.Language.LanguageCode }}"
+	dir="{{ or site.Language.LanguageDirection `ltr` }}"
+>
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		<header>{{ partial "header.html" . }}</header>
+		<main>{{ block "main" . }}{{ end }}</main>
+		<button id="scroll-top-btn">
+			<ion-icon name="chevron-up-outline"></ion-icon>
+		</button>
+		<footer>{{ partial "footer.html" . }}</footer>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="{{ .Site.BaseURL }}/js/navigation.js" defer></script>
+		<script src="{{ .Site.BaseURL }}/js/text-expand.js" defer></script>
+		<script src="{{ .Site.BaseURL }}/js/fslightbox.min.js"></script>
+	</body>
+</html>

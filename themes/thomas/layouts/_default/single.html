@@ -1,0 +1,49 @@
+{{ define "main" }}
+<div class="container page-single">
+	<div class="row">
+		<div class="col">
+			<div class="page-heading">
+				<h1 class="page-heading-title">{{ .Title }}</h1>
+				{{- $dirSegments := split .File.Dir "/" -}} {{- $category := index
+				$dirSegments (sub (len $dirSegments) 3) -}} {{- $displayName := index
+				$.Site.Params.categoryDisplayNames $category -}}
+				<p class="page-heading-description">{{ $displayName }}</p>
+			</div>
+			<div class="tags-container">
+				{{- if .Params.releaseDate }}
+				<div class="tag release-date">
+					<ion-icon name="calendar-outline"></ion-icon>
+					{{ .Params.releaseDate }}
+				</div>
+				{{- end }}
+				<div class="tag genre">
+				{{- if .Params.genre }}
+					{{ if .Params.genreIcon }}
+						<ion-icon name="{{ .Params.genreIcon }}"></ion-icon>
+						{{- end }}
+					{{ .Params.genre }}
+				</div>
+				{{- end }}
+				{{- if .Params.engine }}
+				<div class="tag engine">
+					<ion-icon name="construct-outline"></ion-icon>
+					<!-- <ion-icon name="build-outline"></ion-icon> -->
+					{{ .Params.engine }}
+				</div>
+				{{- end }}
+			</div>
+			<img class="full-width" src="{{ .Params.image }}" alt="" />
+			<!-- 
+			{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }} {{
+			$dateHuman := .Date | time.Format ":date_long" }}
+			<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> -->
+		</div>
+	</div>
+	<div class="row page">
+		<div class="col">
+			{{ .Content }}
+			<!-- {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }} -->
+		</div>
+	</div>
+</div>
+{{ end }}

@@ -1,0 +1,3 @@
+<!-- layouts/shortcodes/customtag.html -->
+{{ $tag := .Get "tag" | safeHTML }}
+<{{ $tag }}>{{ .Inner | safeHTML }}</{{ $tag }}>
