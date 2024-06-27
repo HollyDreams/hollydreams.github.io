@@ -61,6 +61,7 @@ header .navbar {
 		opacity: 0;
 		overflow: auto;
 		pointer-events: none;
+		align-items: center;
 
 		position: fixed;
 		top: 0;
@@ -158,9 +159,12 @@ header .navbar {
 	}
 
 	&-block {
-		.social-links a {
-			font-size: 1.3rem;
+		.social-links {
 			display: inline-flex;
+			a {
+				font-size: 1.3rem;
+				display: inline-flex;
+			}
 		}
 	}
 }

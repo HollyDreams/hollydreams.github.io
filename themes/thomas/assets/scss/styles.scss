@@ -168,7 +168,10 @@ header {
 		order: -1;
 		margin-bottom: 32px;
 		.img-wrapper {
-			width: 90%;
+			width: 100%;
+			@media screen and (min-width: 760px) {
+				width: 90%;
+			}
 		}
 	}
 
