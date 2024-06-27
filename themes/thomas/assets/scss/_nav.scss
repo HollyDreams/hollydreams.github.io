@@ -147,6 +147,9 @@ header .navbar {
 			line-height: 1.5;
 			text-transform: uppercase;
 			color: var(--color-body); //var(--color-blue-300);
+			img {
+				max-width: 240px;
+			}
 		}
 	}
 
@@ -159,7 +162,7 @@ header .navbar {
 }
 
 #navbar-block--header:not(.active) {
-	margin-left: 100px;
+	margin-left: 80px;
 }
 
 .menu {
