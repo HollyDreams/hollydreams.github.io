@@ -24,11 +24,7 @@
 		</div>
 		<div class="col" id="hero-image">
 			<div class="img-wrapper">
-				<img
-					loading="lazy"
-					src="./images/self.jpeg"
-					alt="Thomas Rinaldi"
-				/>
+				<img loading="lazy" src="./images/self.jpeg" alt="Thomas Rinaldi" />
 			</div>
 		</div>
 	</section>
@@ -42,28 +38,27 @@
 				<ion-icon class="ms-2 icon" name="arrow-forward-outline"></ion-icon>
 			</a>
 		</div>
-		
+
 		<div class="latest-works-list row">
-			{{ range ( where .Site.RegularPages "Type" "works" | first 3 ) }}
-				{{- $dirSegments := split .File.Dir "/" -}}
-				{{- $category := index $dirSegments (sub (len $dirSegments) 3) -}}
-				{{- $displayName := index $.Site.Params.categoryDisplayNames $category -}}
-				<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
-					<a href="{{ .Permalink }}">
-						<div class="card-content">
-							<div class="card-image">
-								<img src="{{ .Params.image }}" alt="" />
-							</div>
-							<div class="card-info">
-								<div class="card-title">{{ .Title }}</div>
-								<div class="card-subtitle">{{ $displayName }}</div>
-							</div>
+			{{ range ( where .Site.RegularPages "Type" "works" | first 3 ) }} {{-
+			$dirSegments := split .File.Dir "/" -}} {{- $category := index
+			$dirSegments (sub (len $dirSegments) 3) -}} {{- $displayName := index
+			$.Site.Params.categoryDisplayNames $category -}}
+			<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+				<a href="{{ .Permalink }}">
+					<div class="card-content">
+						<div class="card-image">
+							<img src="{{ .Params.image }}" alt="" />
 						</div>
-					</a>
-				</div>
+						<div class="card-info">
+							<div class="card-title">{{ .Title }}</div>
+							<div class="card-subtitle">{{ $displayName }}</div>
+						</div>
+					</div>
+				</a>
+			</div>
 			{{ end }}
 		</div>
-		
 
 		<!-- 
 		{{ range site.RegularPages }}
@@ -74,7 +69,18 @@
 	<!-- CONTACT -->
 	<section class="row" id="contact">
 		<h2 class="title">Get in touch</h2>
-		<form action="">
+		<div class="contact-links">
+			<!-- 
+			<a mailto="" class="flex align-items-center"
+				><ion-icon name="mail-open-outline"></ion-icon></a>
+ -->
+			<a
+				href="https://www.linkedin.com/in/thomas-niccolo-rinaldi/"
+				target="_blank"
+				><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
+			>
+		</div>
+		<!-- <form action="">
 			<input type="text" placeholder="Your name" /><input
 				type="text"
 				placeholder="Your email address"
@@ -83,7 +89,7 @@
 			<div class="form-button">
 				<button type="submit" class="btn btn-primary">Send</button>
 			</div>
-		</form>
+		</form> -->
 	</section>
 </div>
 {{ end }}

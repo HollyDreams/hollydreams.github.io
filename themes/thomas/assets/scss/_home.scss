@@ -107,6 +107,20 @@
 	}
 }
 
+#contact {
+	.contact-links {
+		margin: 0 auto;
+		width: auto;
+		a {
+			display: flex;
+			align-items: center;
+			ion-icon {
+				margin-right: 12px;
+			}
+		}
+	}
+}
+
 .btn-icon {
 	display: inline-flex;
 	align-items: center;
