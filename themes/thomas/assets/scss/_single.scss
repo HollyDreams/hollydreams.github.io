@@ -17,7 +17,7 @@ img.full-width {
 		}
 	}
 
-	a:not(.btn) {
+	a:not(.btn, .btn a) {
 		text-decoration: underline;
 	}
 	.btn a {
