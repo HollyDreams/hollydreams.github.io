@@ -9,7 +9,7 @@
 	<body>
 		<header>{{ partial "header.html" . }}</header>
 		<main>{{ block "main" . }}{{ end }}</main>
-		<button id="scroll-top-btn">
+		<button id="scroll-top-btn" aria-label="Scroll to top button">
 			<ion-icon name="chevron-up-outline"></ion-icon>
 		</button>
 		<footer>{{ partial "footer.html" . }}</footer>

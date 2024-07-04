@@ -72,15 +72,16 @@
 		<div class="contact-links">
 
 			<a
-				href="mailto:thomasn.rinaldi@gmail.com"
+				href="mailto:{{ .Params.email }}"
 				class="flex align-items-center mb-3"
 				><ion-icon name="mail-open-outline"></ion-icon
-				>thomasn.rinaldi@gmail.com</a
+				>{{ .Params.email }}</a
 			>
 
 			<a
-				href="https://www.linkedin.com/in/thomas-niccolo-rinaldi/"
+				href="{{ .Params.linkedinUrl }}"
 				target="_blank"
+				aria-label="Open LinkedIn profile"
 				><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
 			>
 		</div>

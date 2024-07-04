@@ -17,11 +17,13 @@
 				</div>
 				{{- end }}
 				<div class="tag genre">
-				{{- if .Params.genre }}
+				{{- if .Params.genreTina }}
 					{{ if .Params.genreIcon }}
 						<ion-icon name="{{ .Params.genreIcon }}"></ion-icon>
 						{{- end }}
-					{{ .Params.genre }}
+						{{ with .Params.genreTina }}
+							{{ delimit . ", " }}
+						{{ end }}
 				</div>
 				{{- end }}
 				{{- if .Params.engine }}
@@ -32,7 +34,7 @@
 				</div>
 				{{- end }}
 			</div>
-			<img class="full-width" src="{{ .Params.image }}" alt="" />
+			<img class="full-width" src="{{ .Params.imgSrc }}" alt="" />
 			<!-- 
 			{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }} {{
 			$dateHuman := .Date | time.Format ":date_long" }}

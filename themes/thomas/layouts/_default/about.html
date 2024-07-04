@@ -7,11 +7,14 @@
 			<div class="container">
 				<div class="row">
 					<div id="bio-img" class="col">
-						<img src="{{ .Params.bioImage }}" alt="Thomas Rinaldi">
+						<img src="{{ .Params.imgSrc }}" alt="Thomas Rinaldi">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col page">
+						{{- if .Params.bioTitle }}
+						<h2 class="section-title mb-5">{{ .Params.bioTitle }}</h2>
+						{{ end }}
 						{{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags"
 						"page" .) }}
 					</div>
