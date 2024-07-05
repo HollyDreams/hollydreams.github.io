@@ -49,17 +49,21 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Print first few characters of environment variables
+        environment:
+          name: github-pages
         run: |
-          echo "NEXT_PUBLIC_TINA_CLIENT_ID starts with: ${GITHUB_NEXT_PUBLIC_TINA_CLIENT_ID:0:4}"
-          echo "TINA_TOKEN starts with: ${GITHUB_TINA_TOKEN:0:4}"
+          echo "NEXT_PUBLIC_TINA_CLIENT_ID starts with: ${NEXT_PUBLIC_TINA_CLIENT_ID:0:4}"
+          echo "TINA_TOKEN starts with: ${TINA_TOKEN:0:4}"
         env:
-          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.GITHUB_NEXT_PUBLIC_TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.GITHUB_TINA_TOKEN }}
+          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
 
       - name: Build TinaCMS
+        environment:
+          name: github-pages
         env:
-          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.GITHUB_NEXT_PUBLIC_TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.GITHUB_TINA_TOKEN }}
+          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npx tinacms build          
       - name: Build with Hugo
         env:
