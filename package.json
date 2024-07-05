@@ -1,5 +1,14 @@
 {
+  "scripts": {
+    "dev": "hugo server -D --disableFastRender",
+    "tina": "npx tinacms dev -c 'hugo server -D --disableFastRender'"
+  },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "tinacms": "^1.6.4"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.46",
+    "@types/node": "^20.14.9"
   }
 }

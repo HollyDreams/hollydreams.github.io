@@ -5,7 +5,7 @@
 	<section class="row" id="hero">
 		<div class="col" id="hero-text">
 			<div>
-				<h1 id="hero-title">Hi there, I am <br />Thomas Rinaldi</h1>
+				<h1 id="hero-title" data-tina-field="title">Hi there, I am <br />Thomas Rinaldi</h1>
 				<p id="hero-description">
 					A <strong>Narrative Designer</strong> and a <strong>Writer</strong>
 					<br />
@@ -40,19 +40,16 @@
 		</div>
 
 		<div class="latest-works-list row">
-			{{ range ( where .Site.RegularPages "Type" "works" | first 3 ) }} {{-
-			$dirSegments := split .File.Dir "/" -}} {{- $category := index
-			$dirSegments (sub (len $dirSegments) 3) -}} {{- $displayName := index
-			$.Site.Params.categoryDisplayNames $category -}}
+			{{ range ( where .Site.RegularPages "Type" "works" | first 3 ) }} 
 			<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
 				<a href="{{ .Permalink }}">
 					<div class="card-content">
 						<div class="card-image">
-							<img src="{{ .Params.image }}" alt="" />
+							<img src="{{ .Params.imgSrc }}" alt="" />
 						</div>
 						<div class="card-info">
 							<div class="card-title">{{ .Title }}</div>
-							<div class="card-subtitle">{{ $displayName }}</div>
+							<div class="card-subtitle">{{ .Params.category }}</div>
 						</div>
 					</div>
 				</a>
@@ -72,15 +69,16 @@
 		<div class="contact-links">
 
 			<a
-				href="mailto:thomasn.rinaldi@gmail.com"
+				href="mailto:{{ .Params.email }}"
 				class="flex align-items-center mb-3"
 				><ion-icon name="mail-open-outline"></ion-icon
-				>thomasn.rinaldi@gmail.com</a
+				>{{ .Params.email }}</a
 			>
 
 			<a
-				href="https://www.linkedin.com/in/thomas-niccolo-rinaldi/"
+				href="{{ .Params.linkedinUrl }}"
 				target="_blank"
+				aria-label="Open LinkedIn profile"
 				><ion-icon name="logo-linkedin"></ion-icon> LinkedIn</a
 			>
 		</div>

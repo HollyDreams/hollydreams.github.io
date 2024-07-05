@@ -1,12 +1,19 @@
-+++ 
-title = 'Kita' 
-date = 2023-01-15T09:00:00-07:00 
-draft = false 
-image = 'https://static.wixstatic.com/media/352c30_6dbf7550bc3b4b97ba16375811f5d13b~mv2.png/v1/fill/w_791,h_474,fp_0.50_0.50,q_90,enc_auto/352c30_6dbf7550bc3b4b97ba16375811f5d13b~mv2.png' 
-genre = 'Fantasy, Drama'
-genreIcon = 'color-wand-outline'
-+++  
-
+---
+image: >-
+  https://static.wixstatic.com/media/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png/v1/fill/w_1123,h_672,fp_0.50_0.50,q_90,enc_auto/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png
+genre: 'Noir, Thriller, Horror'
+category: Books and Stories
+imgSrc: /images/kita.png
+tags:
+  genreData:
+    genre: 'Fantasy, Drama'
+    genreIcon: color-wand-outline
+genreTina:
+  - Fantasy
+  - Drama
+genreIcon: ''
+title: Kita
+---
 
 Le dita scorrevano la corteccia dei rami per trovare appigli che facilitassero la salita ad una posizione ed avere una visuale migliore sull’obiettivo.
 Facendo attenzione a rimanere nascosta dalle fronde, Kita si mosse silenziosamente. Il respiro calmo e profondo, l’aria fredda dell’inverno che le riempiva i polmoni, schiarendole la mente.
@@ -21,9 +28,7 @@ L’alfa che stava puntando era considerato il più forte e scaltro in generazio
 Un movimento improvviso attirò la sua attenzione. Eccolo! Un essere mastodontico. La pelliccia bianca che lo aveva reso famoso era addirittura più splendente della neve che lo circondava.
 Kita vide il suo sguardo spaziare in tutte le direzioni, come alla ricerca di qualcosa, o qualcuno.
 
-
-[expand]
-
+\[expand]
 
 Osservò la cassa toracica espandersi mentre inalava l’aria, analizzando le varie tracce di odori portate e mischiate dal vento.
 Con orgoglio, Kita si congratulò con se stessa per la sua preparazione. Sembrava che non fosse ancora riuscito a percepirla.
@@ -85,7 +90,7 @@ Vi conferiremo ora la forza che ci permette di essere ciò che siamo”. Detto c
 “Ricordate: con la forza che vi doniamo ricevete anche responsabilità. Responsabilità verso il clan e verso il mondo che vi circonda. Bevete, se accettate quanto è richiesto da voi”.
 Kita allungò le braccia per afferrare la coppa che il padre le stava porgendo e se la portò alle labbra, prendendone un sorso. Deglutì il sangue caldo del padre, continuando a sentire il gusto ferreo che permase in bocca mentre passava la coppa al suo vicino.
 La bambina era sempre più carica di aspettative e riusciva a percepire un misto di ansia, nervosismo ed eccitazione da parte degli altri cuccioli intorno a lei. Il cuore continuava a battere veloce nel suo petto. Stava osservando gli ultimi svuotare lentamente la coppa quando il respiro improvvisamente le si ruppe in gola e il sangue si fermò nelle vene, senza più battiti che lo facessero scorrere. Il panico iniziò ad invaderla mentre si artigliava la gola in cerca di aria. Gli occhi le si spalancarono e la sua percezione dei colori del mondo circostante cambiò, la gamma cromatica si uniformò in sfumature di grigio. Le parti più in ombra nella yurta diventarono più luminose. Le mani in cerca d’aria si spostarono sulla bocca, come a cercare di spingerne dentro l’ossigeno. Le dita sfiorarono la faccia che si stava allungando, il naso allargando, i denti affilando. Sentì ogni osso del suo corpo modificarsi e riposizionarsi, e i muscoli distendersi, flettersi, irrobustirsi. Le mani passarono davanti agli occhi, e non erano più glabre, ma coperte da una corta peluria che andava fin su per le braccia, partendo dalle dita ora artigliate. La cassa toracica si espanse all’improvviso e un’ondata d’aria le riempì i polmoni.
- Era come se stesse respirando per la prima volta. Un ruggito partì dal suo stomaco ed eruppe dalla bocca.
+Era come se stesse respirando per la prima volta. Un ruggito partì dal suo stomaco ed eruppe dalla bocca.
 Kita si accasciò in avanti, appoggiandosi sui gomiti, ansimante. Con le lacrime che le appannavano la vista si voltò a guardare gli altri cuccioli.
 Come lei, alcuni avevano quasi completato la trasformazione mentre, in fondo alla fila, gli ultimi stavano iniziando ad affannarsi in cerca in aria.
 Era uno spettacolo incredibile vedere altri della sua età cambiare forma sotto l’effetto della maledizione (o era una benedizione?) indotta dal sangue di suo padre. A dire il vero, era raro vedere qualcuno trasformarsi solitamente, e Kita non aveva mai visto nessuno farlo. I bambini non ancora abbastanza grandi per poter partecipare all'iniziazione, rimanevano durante tutta la cerimonia in un'altra tenda con pochi adulti.
@@ -107,7 +112,7 @@ Più si avvicinava e più il tempo sembrava rallentare. Era diverso da quanto ac
 Kita spiccò un balzo contro il cinghiale ed il tempo si fermò mentre era a mezz’aria... ma questo non le fu d’aiuto nello schivare la zannata che le si piantò nella spalla sinistra per poi scaraventarla di lato. Rotolò nella neve, il respiro spezzato dall’impatto. Non era il momento di riposare, infatti il suo avversario le stava già correndo contro. Era passata da cacciatrice a preda? Con un balzo si rialzò in tempo per sfuggire di un soffio alla carica. Guardò la ferita che lentamente, troppo lentamente, stava iniziando a rimarginarsi. Nonostante la guarigione accelerata data dalla mutazione, ci sarebbe voluto un po’ per tornare come prima. Non aveva tutto quel tempo.
 Il cinghiale tornò a caricare e, stavolta, Kita non tentò neanche di schivare ma, una volta sufficientemente vicino, gli tirò un pugno direttamente sul lato del muso abbastanza forte e veloce da modificarne la traiettoria. Nonostante quel colpo micidiale, il cinghiale si riprese semplicemente scuotendosi e ringhiando contro la bambina, che si preparò a riceverlo. Cercò di distrarlo con un paio di pugni veloci, ma questo le piombò addosso colpendola in mezzo alla faccia con una testata. Kita sentì il naso rompersi ed un’esplosione di dolore le attraversò la testa quando i recettori nervosi del muso vennero impattati. Il sangue iniziò a scorrerle sulla pelliccia e le si infilò in bocca. Il sapore del proprio sangue le ricordò quello del padre bevuto poco prima. Erano solo poche gocce, e Kita ne voleva di più. Era assetata di sangue e morte. Da quel momento entrò in trance, il corpo mosso solamente da una furia omicida indirizzata all'annientamento del suo obiettivo. Si buttò in avanti afferrando entrambe le zanne del cinghiale e rispondendo al suo ultimo colpo a sua volta con una testata in mezzo al muso e ricevendo un grugnito in risposta. Il cinghiale cercò di divincolarsi dalla stretta che Kita aveva sulle sue zanne. Nonostante la differenza di stazza e peso non riusciva a sfuggire alla morsa o anche solo a smuovere la Kita. Questa tirò un calcio nel ventre del cinghiale e, usando le zanne come maniglie, buttò l’animale a terra, di lato. Continuando a fare forza su una delle zanne la spezzò, strappando grugniti di dolore e terrore da parte di quella che era tornata ad essere la preda di una caccia a senso unico. Il cinghiale mise più forza nel tentativo di scrollarsi di dosso Kita, ma questa gli sollevò il muso snudandone il collo. Poi affondò i denti affilati nella gola dell’animale terrorizzato, strappandone con un morso la carotide. Uno schizzo di sangue intermittente la inondò ogni volta che il cuore del cinghiale lo pompava fuori. Ora, dalla bocca del cinghiale usciva solamente un rantolo smorzato e sangue misto a bava, mentre con le ultime forze tentava di scalciare, invano.
 Ma la sete di Kita non si era ancora placata. Con ferocia continuò a dilaniare il cinghiale ormai cadavere. Il sangue dell'animale venne velocemente assimilato e mischiato con quello bel padre bevuto poche ore prima ed insieme si legarono a quello di Kita. I muscoli della bambina crebbero ancora una volta, la rada pelliccia si infittì, il suo corpo si ingrandì ancora di più. La sua vista cambiò nuovamente ed ora i suoi occhi vedevano! Vedeva la civetta che si stava risvegliando allo spuntare delle prime stelle. Vedeva il respiro impercettibile degli alberi, addormentati nella loro invernale notte. Vedeva l'equilibrio che era la natura, il ciclo immutabile di vita e morte e rinascita. Vedeva come tutto era collegato e come lei era un elemento del tutto che la circondava. Vedeva la vita che aveva strappato e le sue zampe macchiate di sangue.
- Ogni traccia della sua umanità era scomparsa, ad eccezione della posizione eretta. Ma anche quella scomparve quando crollò sulle ginocchia e lanciò un ululato disperato.
+Ogni traccia della sua umanità era scomparsa, ad eccezione della posizione eretta. Ma anche quella scomparve quando crollò sulle ginocchia e lanciò un ululato disperato.
 Kita, il respiro affannato, sentì una mano posarlesi sulla spalla e si voltò a guardare il viso del padre che le rivolgeva un sorriso un po’ velato di tristezza. Lo vide chinarsi e chiudere gli occhi, quasi con tenerezza, al cinghiale ucciso. Mentre ancora tremava agitata,l'aspetto di Kita tornò quello di un essere umano. Non era più una bambina. Sembrava che, in poche ore, fossero passati anni. Lacrime le rigavano le guance.
 Kalon la avvolse in una coperta, poi in un abbraccio.
 La ormai ragazza continuò a singhiozzare. Il padre allora le prese il volto tra le mani e, guardandola negli occhi, le disse "Questo è il sacrificio che la natura ci offre per donarci la forza per proteggerla. Ma ogni volta che per poterlo fare saremo costretti a prendere una vita, sarà come uccidere un nostro fratello. Questo è il nostro dono e la nostra maledizione". Una mano passò con affetto sulla pelliccia bianca che portava sulle spalle, appartenuta al cervo che lui stesso aveva ucciso durante il suo di rituale.
@@ -143,7 +148,7 @@ Ma la ragazza non voleva rimanere in difesa. Era preoccupata per quello che stav
 Per questo motivo, non appena i pochi adulti rimasti non stavano guardando, si defilò e si allontanò dal villaggio a passo rapido e leggero.
 Aveva percorso non più di un centinaio di metri che sentì un rumore di passi dietro di lei, ai quali si girò pronta ad inventare una qualche scusa. Ma invece di veterani, una coppia di ragazzi, Traci ed Augia, fratello e sorella, gemelli. Come lei avevano appena completato il loro rituale, seguiti rispettivamente dal padre e dalla madre durante la prova.
 Appena dopo aver completato il rito della vestizione, aveva sentito di sfuggita i loro genitori raccontare di come Traci avesse affrontato un raro cavallo carnivoro che era riuscito ad azzannargli il petto, mentre la sorella aveva annegato la compagna di questo nel fiume che scorreva in mezzo alla valle. Avevano aggiunto che era strano che due cuccioli avessero affrontato insieme il rito, poiché di solito la natura della bestia appena svegliata è quella del lupo solitario. Probabilmente, avevano concluso, era per la loro natura di gemelli che li aveva portati a rimanere inconsciamente insieme.
- Ora che ripensava alla trasformazione, Kita si rese conto che, come le aveva predetto il padre, questa volta sembrava che lei fosse in controllo, non il lupo.
+Ora che ripensava alla trasformazione, Kita si rese conto che, come le aveva predetto il padre, questa volta sembrava che lei fosse in controllo, non il lupo.
 I due gemelli si avvicinarono e semplicemente dissero “Veniamo anche noi”. La ragazza, altrettanto semplicemente, annuì, si girò e riprese a correre verso il bagliore di luci che nel frattempo era comparso e visibile al di là della valle.
 Il piccolo gruppo correva rapido, ora che si erano allontanati dal villaggio e non temevano più di essere scoperti. Man mano che si avvicinavano alla sommità delle rapide colline che circondavano quella che loro chiamavano casa, cominciarono a percepire tracce degli intrusi.
 Dapprima, da lontano, era solo un bagliore, ma ben presto fiutarono l'odore di bruciato, legna e combustibile e carne, poi grida e ringhi, rumore di metallo contorto e lacerato.
@@ -171,4 +176,4 @@ Kita invece volse nuovamente lo sguardo verso quegli uomini che, là in basso, s
 
 Una lacrima le rigò il muso.
 
-[/expand]
+\[/expand]
