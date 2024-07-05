@@ -48,6 +48,14 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Print first few characters of environment variables
+        run: |
+          echo "NEXT_PUBLIC_TINA_CLIENT_ID starts with: ${NEXT_PUBLIC_TINA_CLIENT_ID:0:4}"
+          echo "TINA_TOKEN starts with: ${TINA_TOKEN:0:4}"
+        env:
+          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+
       - name: Build TinaCMS
         env:
           NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
