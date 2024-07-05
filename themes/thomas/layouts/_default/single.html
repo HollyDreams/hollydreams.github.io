@@ -9,32 +9,34 @@
 				$.Site.Params.categoryDisplayNames $category -}}
 				<p class="page-heading-description">{{ $displayName }}</p>
 			</div>
+			{{- if .Params.tags }}
 			<div class="tags-container">
-				{{- if .Params.releaseDate }}
+				{{- if .Params.tags.releaseDate }}
 				<div class="tag release-date">
 					<ion-icon name="calendar-outline"></ion-icon>
-					{{ .Params.releaseDate }}
+					{{ .Params.tags.releaseDate }}
 				</div>
 				{{- end }}
+				{{- if .Params.tags.genreData.genre }}
 				<div class="tag genre">
-				{{- if .Params.genreTina }}
-					{{ if .Params.genreIcon }}
-						<ion-icon name="{{ .Params.genreIcon }}"></ion-icon>
+					{{ if .Params.tags.genreData.genreIcon }}
+						<ion-icon name="{{ .Params.tags.genreData.genreIcon }}"></ion-icon>
 						{{- end }}
-						{{ with .Params.genreTina }}
-							{{ delimit . ", " }}
-						{{ end }}
+						{{ .Params.tags.genreData.genre }}
 				</div>
 				{{- end }}
-				{{- if .Params.engine }}
+				{{- if .Params.tags.engine }}
 				<div class="tag engine">
 					<ion-icon name="construct-outline"></ion-icon>
 					<!-- <ion-icon name="build-outline"></ion-icon> -->
-					{{ .Params.engine }}
+					{{ .Params.tags.engine }}
 				</div>
 				{{- end }}
 			</div>
-			<img class="full-width" src="{{ .Params.imgSrc }}" alt="" />
+			{{ end }}
+			{{- if .Params.imgSrc }}
+				<img class="full-width" src="{{ .Params.imgSrc }}" alt="" />
+			{{end}}
 			<!-- 
 			{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }} {{
 			$dateHuman := .Date | time.Format ":date_long" }}

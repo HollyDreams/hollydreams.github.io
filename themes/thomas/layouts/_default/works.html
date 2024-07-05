@@ -2,46 +2,38 @@
 <div class="container" id="page-list">
 	<div class="page-heading">
 		<h1 class="page-heading-title">{{ .Title }}</h1>
-		<p>{{ .Content | replaceRE "<p>" "<p class=\"page-heading-description\">" | safeHTML  }}</p>
+		<p>{{ .Content | replaceRE "<p>" "<p class=\"page-heading-description\">" | safeHTML }}</p>
 	</div>
-	{{- $categories := slice -}}
-	{{- $works := where .Site.RegularPages "Type" "works" -}}
-	
-	{{- range $works -}}
-			{{- $dirSegments := split .File.Dir "/" -}}
-			{{- $category := index $dirSegments (sub (len $dirSegments) 3) -}}
-			{{- if not (in $categories $category) -}}
-					{{- $categories = $categories | append $category -}}
-			{{- end -}}
-	{{- end -}}
-	
-	{{- range $categories -}}
-			{{- $displayName := index $.Site.Params.categoryDisplayNames . -}}
-			{{- $currentCategory := . }}
-			<section class="latest-works-list row">
-					<h2>{{ $displayName }}</h2>
-					{{- range $works -}}
-							{{- $dirSegments := split .File.Dir "/" -}}
-							{{- $category := index $dirSegments (sub (len $dirSegments) 3) -}}
-							{{- if eq $category $currentCategory -}}
-									<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
-											<a href="{{ .Permalink }}">
-													<div class="card-content">
-															<div class="card-image">
-																	<img src="{{ .Params.image }}" alt="" />
-															</div>
-															<div class="card-info">
-																	<div class="card-title">{{ .Title }}</div>
-																	<div class="card-subtitle">{{ $displayName }}</div>
-															</div>
-													</div>
-											</a>
-									</div>
-							{{- end -}}
-					{{- end -}}
-			</section>
-	{{- end -}}
-	
-</div>
 
+	
+<div class="single-content-area guide-page">
+
+  <div class="main-content">
+        <!-- Groups content according to the $groupBy field in front matter -->
+        {{ range .Pages.GroupByParam  "category" }}
+        
+	<section class="latest-works-list row">
+		<h2>{{ .Key }}</h2>
+
+		<div class="row">{{ range .Pages }}
+				<div class="custom-card col col-12 col-d-6 col-t-12 col-lg-4">
+					<a href="{{ .Permalink }}">
+						<div class="card-content">
+							<div class="card-image">
+								<img src="{{ .Params.imgSrc }}" alt="{{ .Title }}" />
+							</div>
+							<div class="card-info">
+								<div class="card-title">{{ .Title }}</div>
+								<div class="card-subtitle">{{ .Params.category }}</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			{{ end }}
+		</div>
+
+	</section>
+	{{end}}
+  </div>
+</div>
 {{ end }}

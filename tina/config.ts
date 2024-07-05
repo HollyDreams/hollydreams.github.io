@@ -2,7 +2,6 @@ import { defineConfig } from "tinacms";
 
 const branch =
 	process.env.GITHUB_BRANCH ||
-	process.env.VERCEL_GIT_COMMIT_REF ||
 	process.env.HEAD ||
 	"main";
 
@@ -44,13 +43,6 @@ export default defineConfig({
         fields: [
           {
             type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "string",
             name: "email",
             label: "Email",
             required: true,
@@ -60,12 +52,6 @@ export default defineConfig({
             name: "linkedinUrl",
             label: "LinkedIn URL",
             required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
           },
         ],
       },
@@ -114,10 +100,10 @@ export default defineConfig({
 				name: "works",
 				label: "Works",
 				path: "content/works",
-				format: "md",
+				format: "md",/* 
 				match: {
-					include: "**/index", // This will match any index.md file inside subdirectories
-				},
+					include: "index", // This will match any index.md file inside subdirectories
+				}, */
 				ui: {
 					allowedActions: {
 						create: true,
@@ -126,47 +112,54 @@ export default defineConfig({
 				},
 				fields: [
 					{
+						type: "string",
+						name: "title",
+						label: "Title",
+						isTitle: true,
+						required: true,
+					},
+          {
+            type: "string",
+            name: "category",
+            label: "Category",
+            required: true,
+          },
+					{
 						type: "image",
 						label: "Hero image",
 						name: "imgSrc",
-					},
-					{
-						type: "string",
-						label: "Genre",
-						list: true,
-						name: "genreTina",
-					},
-					{
-						type: "string",
-						label: "Genre Icon",
-						name: "genreIcon"
-					},
-					{
-						type: "string",
-						name: "title",
-						label: "Title",
-						isTitle: true,
-						required: true,
-					},
-					{
-						type: "rich-text",
-						name: "body",
-						label: "Body",
-						isBody: true,
-					},
-				],
-			},
-			{
-				name: "post",
-				label: "Posts",
-				path: "content/posts",
-				fields: [
-					{
-						type: "string",
-						name: "title",
-						label: "Title",
-						isTitle: true,
-						required: true,
+					},{
+						label: "Tags",
+						name: "tags",
+						type: "object",
+						fields: [
+							{
+								label: "Release Date",
+								name: "releaseDate",
+								type: "string"
+							},
+							{
+								label: "Genre",
+								name: "genreData",
+								type: "object",
+								fields: [
+									{
+										label: "Genre",
+										name: "genre",
+										type: "string"
+									},
+									{
+										label: "Icon (see https://ionic.io/ionicons)",
+										name: "genreIcon",
+										type: "string"
+									},]
+							},
+							{
+								label: "Game Engine",
+								name: "engine",
+								type: "string"
+							}
+						]
 					},
 					{
 						type: "rich-text",
@@ -175,7 +168,7 @@ export default defineConfig({
 						isBody: true,
 					},
 				],
-			},
+			}
 		],
 	},
 });

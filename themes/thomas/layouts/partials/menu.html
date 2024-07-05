@@ -33,8 +33,10 @@ Renders a menu for the given menu ID.
 
 
     <div class="social-links">
+      {{ $home := site.Home }}
+      {{ $linkedinUrl := $home.Params.linkedinUrl }}
       <a
-        href="https://www.linkedin.com/in/thomas-niccolo-rinaldi/"
+        href="{{$linkedinUrl}}"
         target="_blank"
 				aria-label="Open LinkedIn profile"
         ><ion-icon name="logo-linkedin"></ion-icon
