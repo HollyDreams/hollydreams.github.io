@@ -2,17 +2,17 @@
 image: >-
   https://static.wixstatic.com/media/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png/v1/fill/w_1123,h_672,fp_0.50_0.50,q_90,enc_auto/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png
 genre: 'Noir, Thriller, Horror'
-category: Books and Stories
-imgSrc: /images/kita.png
-tags:
-  genreData:
-    genre: 'Fantasy, Drama'
-    genreIcon: color-wand-outline
 genreTina:
   - Fantasy
   - Drama
 genreIcon: ''
 title: Kita
+category: Books and Stories
+imgSrc: /images/_452d9430-084c-4175-961a-bf73bcbfa9c7.jpeg
+tags:
+  genreData:
+    genre: 'Fantasy, Drama'
+    genreIcon: color-wand-outline
 ---
 
 Le dita scorrevano la corteccia dei rami per trovare appigli che facilitassero la salita ad una posizione ed avere una visuale migliore sull’obiettivo.
