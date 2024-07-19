@@ -2,18 +2,18 @@
 image: >-
   https://static.wixstatic.com/media/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png/v1/fill/w_1123,h_672,fp_0.50_0.50,q_90,enc_auto/352c30_b40b8fd81d4746efa4c76948ad698f8c~mv2.png
 genre: 'Noir, Thriller, Horror'
-category: Books and Stories
-imgSrc: /images/jack-durden.webp
-tags:
-  genreData:
-    genre: 'Noir, Thriller, Horror'
-    genreIcon: skull-outline
 genreTina:
   - Noir
   - Thriller
   - Horror
 genreIcon: skull-outline
 title: Jack Durden
+category: Books and Stories
+imgSrc: /images/Jack Turner.jpg
+tags:
+  genreData:
+    genre: 'Noir, Thriller, Horror'
+    genreIcon: skull-outline
 ---
 
 Driiiiin, driiiiin...
